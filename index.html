@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>My portfolio</title>
+   <!-- box icons -->
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <!-- my css -->
+   <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+   <div class="wrapper">
+      <header class="header">
+         <a class="header__logo" href="#">Portfolio</a>
+
+         <i class='bx bx-menu' id="header-menu__icon"></i>
+
+         <nav class="header__nav">
+            <ul class="header__nav-list">
+               <li class="header__nav-list-item"><a class="header__nav-list-item-link header__nav-list-item-link--active" href="#home">Home</a></li>
+               <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#about">About</a></li>
+               <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#services">Services</a></li>
+               <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#portfolio">Portfolio</a></li>
+               <li class="header__nav-list-item"><a class="header__nav-list-item-link" href="#contact">Contacts</a></li>
+            </ul>
+         </nav>
+      </header>
+      <main class="main">
+         <!-- section HOME -->
+         <section class="main__home" id="home">
+            <div class="main__home-content">
+               <h3 class="main__home-content-subtitle">Hello, my name is</h3>
+               <h1 class="main__home-content-title">Vitalii Protasevych</h1>
+               <h3 class="main__home-content-subtitle main__home-content-subtitle--mb">And I'm a <span class="main-color-span multiple-text"></span></h3>
+               <p class="main__home-content-text">Now I'm looking for a job. Since there are few vacancies and there are many applicants for one
+               position, I try to learn something new. <a class="main-color-span" href="#contact">Contact</a>  me if you have a place for me on your team.</p>
+               <div class="main__home-content-social-media">
+                  <ul class="main__home-content-social-media-list">
+                     <li class="main__home-content-social-media-list-item">
+                        <a class="main__home-content-social-media-list-item-link" href="#"><i class='bx bxl-facebook'></i></a>
+                     </li>
+                     <li class="main__home-content-social-media-list-item">
+                        <a class="main__home-content-social-media-list-item-link" href="#"><i class='bx bxl-instagram-alt'></i></a>
+                     </li>
+                     <li class="main__home-content-social-media-list-item">
+                        <a class="main__home-content-social-media-list-item-link" href="#"><i class='bx bxl-telegram'></i></a>
+                     </li>
+                     <li class="main__home-content-social-media-list-item">
+                        <a class="main__home-content-social-media-list-item-link" href="#"><i class='bx bxl-linkedin'></i></a>
+                     </li>
+                  </ul>
+                  <a class="button" href="#">Download CV</a>
+               </div>
+            </div>
+            <div >
+               <img class="main__home-content-img" src="./images/me-home.png" alt="my photo">
+            </div>
+         </section>
+         <!-- section ABOUT -->
+         <section class="about" id="about">
+            <div class="about__image">
+               <img class="about__image-img" src="./images/me-about.png" alt="my photo">
+            </div>
+            <div class="about__content">
+               <h2 class="content-title about__content-title">About <span class="main-color-span">Me</span></h2>
+               <h3 class="about__content-subtitle">Frontend Developer!</h3>
+               <p class="about__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore doloribus ullam minus, cum, earum alias ratione rerum facere tenetur enim eius autem cumque, iure nemo velit voluptate quos repellendus voluptatem! Corrupti rerum mollitia esse deserunt quam quisquam officia voluptatum nostrum? Impedit, recusandae ut. Earum, nam non. </p>
+               <a class="button" href="#">Read more</a>
+            </div>
+         </section>
+         <!-- section SERVICES -->
+         <section class="services" id="services">
+            <h2 class="content-title services__content-title">Our <span class="main-color-span">Services</span></h2>
+
+            <div class="services__container">
+               <div class="services__box">
+                  <i class='bx bx-code-alt services__icon-style'></i>
+                  <h3 class="services__box-title">Web Development</h3>
+                  <p class="services__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quibusdam vitae exercitationem distinctio dolorum sequi excepturi illum asperiores qui ab?</p>
+                  <a class="button" href="#">Read more</a>
+               </div>
+               <div class="services__box">
+                  <i class='bx bxs-paint services__icon-style'></i>
+                  <h3 class="services__box-title">Graphic Design</h3>
+                  <p class="services__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quibusdam vitae
+                     exercitationem distinctio dolorum sequi excepturi illum asperiores qui ab?</p>
+                  <a class="button" href="#">Read more</a>
+               </div>
+               <div class="services__box">
+                  <i class='bx bx-bar-chart-alt services__icon-style'></i>
+                  <h3 class="services__box-title">Digital marketing</h3>
+                  <p class="services__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quibusdam vitae
+                     exercitationem distinctio dolorum sequi excepturi illum asperiores qui ab?</p>
+                  <a class="button" href="#">Read more</a>
+               </div>
+            </div>
+         </section>
+         <!-- section PORTFOLIO -->
+         <section class="portfolio" id="portfolio">
+            <h2 class="content-title portfolio__content-title">Latest <span class="main-color-span">Projects</span></h2>
+
+            <div class="portfolio__container">
+               <div class="portfolio__box">
+                  <img class="portfolio__box-img" src="./images/car-lease.jpg" alt="photo from portfolio">
+                  <div class="portfolio__box-layer">
+                     <h4 class="portfolio__box-layer-title">Web Design</h4>
+                     <p class="portfolio__box-layer-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, tenetur.</p>
+                     <a class="portfolio__box-layer-link" target="_blank" href="https://resistantgoit.github.io/Car-lease"><i class='bx bx-link-external portfolio__box-layer-icon'></i></a>
+                  </div>
+               </div>
+               <div class="portfolio__box">
+                  <img class="portfolio__box-img" src="./images/Gambling.jpg" alt="photo from portfolio">
+                  <div class="portfolio__box-layer">
+                     <h4 class="portfolio__box-layer-title">Web Design</h4>
+                     <p class="portfolio__box-layer-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, tenetur.</p>
+                     <a class="portfolio__box-layer-link" target="_blank" href="https://resistantgoit.github.io/landing-for-job/"><i class='bx bx-link-external portfolio__box-layer-icon'></i></a>
+                  </div>
+               </div>
+               <div class="portfolio__box">
+                  <img class="portfolio__box-img" src="./images/vi-amor.jpg" alt="photo from portfolio">
+                  <div class="portfolio__box-layer">
+                     <h4 class="portfolio__box-layer-title">Web Design</h4>
+                     <p class="portfolio__box-layer-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, tenetur.</p>
+                     <a class="portfolio__box-layer-link" target="_blank" href="https://resistantgoit.github.io/CoffeeShop_react"><i class='bx bx-link-external portfolio__box-layer-icon'></i></a>
+                  </div>
+               </div>
+               <div class="portfolio__box">
+                  <img class="portfolio__box-img" src="./images/bootstrap.jpg" alt="photo from portfolio">
+                  <div class="portfolio__box-layer">
+                     <h4 class="portfolio__box-layer-title">Web Design</h4>
+                     <p class="portfolio__box-layer-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, tenetur.</p>
+                     <a class="portfolio__box-layer-link" target="_blank" href="https://resistantgoit.github.io/Bootstrap_practice"><i class='bx bx-link-external portfolio__box-layer-icon'></i></a>
+                  </div>
+               </div>
+               <div class="portfolio__box">
+                  <img class="portfolio__box-img" src="./images/1865.jpg" alt="photo from portfolio">
+                  <div class="portfolio__box-layer">
+                     <h4 class="portfolio__box-layer-title">Web Design</h4>
+                     <p class="portfolio__box-layer-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, tenetur.</p>
+                     <a class="portfolio__box-layer-link" target="_blank" href="https://resistantgoit.github.io/1865coffee"><i class='bx bx-link-external portfolio__box-layer-icon'></i></a>
+                  </div>
+               </div>
+               <div class="portfolio__box">
+                  <img class="portfolio__box-img" src="./images/Tasks.jpg" alt="photo from portfolio">
+                  <div class="portfolio__box-layer">
+                     <h4 class="portfolio__box-layer-title">Web Design</h4>
+                     <p class="portfolio__box-layer-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, tenetur.</p>
+                     <a class="portfolio__box-layer-link" target="_blank" href="https://resistantgoit.github.io/Tasks"><i class='bx bx-link-external portfolio__box-layer-icon'></i></a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- section CONTACTS -->
+         <section class="contact" id="contact">
+            <h2 class="content-title contact__title">Contact <span class="main-color-span">Me!</span></h2>
+
+            <form class="contact__form" action="#">
+               <div class="contact__form-input-box">
+                  <input class="contact__form-input" type="text" placeholder="Full Name">
+                  <input class="contact__form-input" type="email" placeholder="Email Address">
+               </div>
+               <div class="contact__form-input-box">
+                  <input class="contact__form-input" type="number" placeholder="Mobile Number">
+                  <input class="contact__form-input" type="text" placeholder="Email Subject">
+               </div>
+               <textarea class="contact__form-textarea" name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+               <input class="button contact__form-btn" type="submit" value="Send Message">
+            </form>
+         </section>
+      </main>
+      <footer class="footer">
+         <div class="footer__block">
+            <p class="footer__text">Copyright &copy; 2023 by Resistant | All Rights Reserved.</p>
+
+            <div class="footer__icon-top">
+               <a class="footer__to-top" href="#home"><i class='bx bxs-to-top'></i></a>
+            </div>
+         </div>
+      </footer>
+   </div>
+
+   <!-- SCROLL REVEAL -->
+   <script src="https://unpkg.com/scrollreveal"></script>
+
+   <!-- TYPED JS -->
+   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+   <script src="./js/main.js"></script>
+</body>
+</html>
