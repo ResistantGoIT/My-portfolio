@@ -354,6 +354,21 @@ section{
 .contact__form-btn{
    margin-top: 2rem;
 }
+.contact__form-submit-box{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 2rem;
+   background: var(--bg-color);
+   border-radius: 4rem;
+   box-shadow: 0 0 1rem green;
+   font-size: 1.6rem;
+   color: green;
+   letter-spacing: .1rem;
+   font-weight: 600;
+   padding: 1rem 2.8em;
+}
+
 
 /*------- FOOTER -------*/
 .footer__block{

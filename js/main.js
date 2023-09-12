@@ -76,9 +76,9 @@ document.querySelector('.contact__form').addEventListener('submit', function (e)
 
    let message = '';
    message += `<b>Sender: ${this.name.value}</b>\n`;
-   message += `<b>:Mail: ${this.email.value}</b>\n`;
-   message += `<b>:Phone: ${this.phone.value}</b>\n`;
-   message += `<b>:Text: ${this.text.value}</b>\n`;
+   message += `<b>Mail:   ${this.email.value}</b>\n`;
+   message += `<b>Phone:  ${this.phone.value}</b>\n`;
+   message += `<b>Text:   ${this.text.value}</b>\n`;
    
    axios.post(URL_API, {
       chat_id: CHAT_ID,
@@ -90,8 +90,11 @@ document.querySelector('.contact__form').addEventListener('submit', function (e)
          this.email.value = '';
          this.phone.value = '';
          this.text.value = '';
-         success.style.background = 'green'
-         
+         success.value = 'Message sent';
+         success.style.background = 'var(--bg-color)'
+         success.style.color = 'green'
+         success.style.boxShadow = '0 0 1rem green'
+         success.style.background = 'var(--bg-color)'
       })
       .catch((err) => {
          console.warn(err);
