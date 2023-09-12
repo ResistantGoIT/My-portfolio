@@ -192,6 +192,9 @@ section{
    font-size: 1.6rem;
    margin: 2rem 0 3rem;
 }
+.about__read-more-text{
+   display: none;
+}
 
 /*------ SERVICES -------*/
 .services,
@@ -260,6 +263,7 @@ section{
 }
 .portfolio__box-img{
    width: 100%;
+   filter: brightness(70%)
 }
 .portfolio__box:hover{
    border: .2rem solid var(--main-color);
@@ -297,8 +301,8 @@ section{
    display: inline-flex;
    justify-content: center;
    align-items: center;
-   width: 5rem;
-   height: 5rem;
+   width: 4rem;
+   height: 4rem;
    border-radius: 50%;
    border: .2rem solid var(--main-color);
    background: transparent;
@@ -329,8 +333,7 @@ section{
 }
 .contact__form-input-box{
    display: flex;
-   justify-content: space-between;
-   flex-wrap: wrap;
+   flex-direction: column;
 }
 .contact__form-input,
 .contact__form-textarea{
@@ -343,7 +346,7 @@ section{
    margin: .7rem 0;
 }
 .contact__form-input{
-   width: 49%;
+   width: 100%;
 }
 .contact__form-textarea{
    resize: none;
@@ -365,7 +368,6 @@ section{
 .footer__text{
    font-size: 1.6rem;
 }
-
 
 /* BREAKPOINTS */
 @media (max-width:1200px) {
@@ -457,9 +459,6 @@ section{
 @media (max-width:450px){
    html {
       font-size: 50%;
-   }
-   .contact__form-input{
-      width: 100%;
    }
    .footer__block{
       flex-direction: column-reverse;

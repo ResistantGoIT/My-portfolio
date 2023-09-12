@@ -33,6 +33,15 @@ window.onscroll = () => {
    navbar.classList.remove('active')
 };
 
+// ----------- read more text --------------
+const readMoreBtn = document.querySelector('.about__read-more-btn')
+const readMoreText = document.querySelector('.about__read-more-text')
+
+
+readMoreBtn.onclick = () => {
+   readMoreText.classList.toggle('about__read-more-text')
+   readMoreText.classList.toggle('header__nav.active')
+}
 
 // --------------scroll reveal--------------
 ScrollReveal({
@@ -49,9 +58,45 @@ ScrollReveal().reveal('.main__home-content-text, .about__content', { origin: 'ri
 
 // -------------- multiple text --------------
 const typed = new Typed('.multiple-text', {
-   strings: ['Junior Frontend Developer', 'Bettor', 'Good Man'],
+   strings: ['HTML/CSS Developer', 'Bettor', 'Good Man'],
    typeSpeed: 50,
    backSpeed: 50,
    backDelay: 1000,
    loop: true
+})
+
+//----------------- SENDING MESSAGE ------------
+const TOKEN = '6100927074:AAFWbikaGUVJvQ0inc-tTYL59aiEnfVzu64';
+const CHAT_ID = '-1001738042446';
+const URL_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
+const success = document.getElementById('success')
+
+document.querySelector('.contact__form').addEventListener('submit', function (e) {
+   e.preventDefault();
+
+   let message = '';
+   message += `<b>Sender: ${this.name.value}</b>\n`;
+   message += `<b>:Mail: ${this.email.value}</b>\n`;
+   message += `<b>:Phone: ${this.phone.value}</b>\n`;
+   message += `<b>:Text: ${this.text.value}</b>\n`;
+   
+   axios.post(URL_API, {
+      chat_id: CHAT_ID,
+      parse_mode: 'html',
+      text: message
+   })
+      .then((res) => {
+         this.name.value = '';
+         this.email.value = '';
+         this.phone.value = '';
+         this.text.value = '';
+         success.style.background = 'green'
+         
+      })
+      .catch((err) => {
+         console.warn(err);
+      })
+      .finally(() => {
+         
+   })
 })
