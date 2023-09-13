@@ -93,20 +93,20 @@
                   <h3 class="services__box-title">Semantics</h3>
                   <p class="services__box-text">An approach to page layout in which the emphasis is not on the content, but on the semantic purpose of each block, as
                   well as on the logical structure of the entire document.</p>
-                  <a class="button" href="https://elit-web.ua/blog/semanticheskaya-verstka-sajta">Read more</a>
+                  <a class="button" href="https://elit-web.ua/blog/semanticheskaya-verstka-sajta" target="_blank">Read more</a>
                </div>
                <div class="services__box">
                   <i class='bx bxs-paint services__icon-style'></i>
                   <h3 class="services__box-title">Pixel Perfect</h3>
                   <p class="services__box-text">A special technique for creating an HTML code structure that allows the layout of the HTML template to match the
                   original layout as closely as possible, pixel for pixel.</p>
-                  <a class="button" href="https://www.unisender.com/ru/glossary/chto-takoe-pixel-perfect-verstka/#anchor-1">Read more</a>
+                  <a class="button" href="https://www.unisender.com/ru/glossary/chto-takoe-pixel-perfect-verstka/#anchor-1" target="_blank">Read more</a>
                </div>
                <div class="services__box">
                   <i class='bx bx-timer services__icon-style'></i>
                   <h3 class="services__box-title">Timing</h3>
                   <p class="services__box-text">Not only does the job need to be done well, but it also needs to be done ON TIME</p>
-                  <a class="button" href="https://dou.ua/lenta/articles/technical-madness/">Read more</a>
+                  <a class="button" href="https://dou.ua/lenta/articles/technical-madness/" target="_blank">Read more</a>
                </div>
             </div>
          </section>
@@ -169,11 +169,17 @@
          <section class="contact" id="contact">
             <h2 class="content-title contact__title">Contact <span class="main-color-span">Me!</span></h2>
 
-            <form class="contact__form" action="#">
+            <form class="contact__form" id="form" action="#" autocomplete="off">
                <div class="contact__form-input-box">
-                  <input class="contact__form-input contact__form-req" type="text" name="name" placeholder="Full Name">
-                  <input class="contact__form-input contact__form-req" type="email" name="email" placeholder="Email Address">
-                  <input class="contact__form-input" type="number" name="phone" placeholder="Mobile Number">
+                  <div>
+                     <input class="contact__form-input contact__form-req" type="text" name="name" id="name" placeholder="Full Name">
+                  </div>
+                  <div>
+                     <input class="contact__form-input contact__form-req" type="email" name="email" id="email" placeholder="Email Address">
+                  </div>
+                  <div>
+                     <input class="contact__form-input" type="number" name="phone" id="phone" placeholder="Mobile Number">
+                  </div>
                </div>
                <textarea class="contact__form-textarea" name="text" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
                <input class="button contact__form-btn" id="success" type="submit" value="Send Message">
@@ -193,8 +199,9 @@
       </footer>
    </div>
 
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+   <!-- FORM VALIDATE -->
+   <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
    <!-- SEND MESSAGE -->
    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 

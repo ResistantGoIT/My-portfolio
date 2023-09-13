@@ -79,27 +79,67 @@ document.querySelector('.contact__form').addEventListener('submit', function (e)
    message += `<b>Mail:   ${this.email.value}</b>\n`;
    message += `<b>Phone:  ${this.phone.value}</b>\n`;
    message += `<b>Text:   ${this.text.value}</b>\n`;
-   
-   axios.post(URL_API, {
-      chat_id: CHAT_ID,
-      parse_mode: 'html',
-      text: message
-   })
-      .then((res) => {
-         this.name.value = '';
-         this.email.value = '';
-         this.phone.value = '';
-         this.text.value = '';
-         success.value = 'Message sent';
-         success.style.background = 'var(--bg-color)'
-         success.style.color = 'green'
-         success.style.boxShadow = '0 0 1rem green'
-         success.style.background = 'var(--bg-color)'
+   if (validation.isValid) {
+      axios.post(URL_API, {
+         chat_id: CHAT_ID,
+         parse_mode: 'html',
+         text: message
       })
-      .catch((err) => {
-         console.warn(err);
+         .then((res) => {
+            this.name.value = '';
+            this.email.value = '';
+            this.phone.value = '';
+            this.text.value = '';
+            success.value = 'Message sent';
+            success.style.background = 'var(--bg-color)'
+            success.style.color = 'green'
+            success.style.boxShadow = '0 0 1rem green'
+            success.style.background = 'var(--bg-color)'
+         })
+         .catch((err) => {
+            console.warn();
+         })
+         .finally(() => {
       })
-      .finally(() => {
-         
-   })
+      
+   }
 })
+
+const validation = new JustValidate('#form');
+
+validation
+   .addField('#name', [
+   {
+      rule: 'required',
+      errorMessage: 'Full Name is required',
+   },
+   {
+      rule: 'minLength',
+      value: 3,
+   },
+   {
+      rule: 'maxLength',
+      value: 30,
+   },
+   ])
+   .addField('#email', [
+   {
+      rule: 'required',
+      errorMessage: 'Email is required',
+   },
+   {
+      rule: 'email',
+      errorMessage: 'Email is invalid!',
+   },
+   ])
+   .addField('#phone', [
+   {
+   rule: 'minLength',
+   value: 7,
+   },
+   {
+      rule: 'maxLength',
+      value: 15,
+   },
+   ])
+console.log(validation)

@@ -216,6 +216,9 @@ section{
    gap: 2rem;
 }
 .services__box{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
    flex: 1 1 30rem;
    background: var(--secondary-bg-color);
    padding: 3rem 2rem 4rem;
@@ -223,6 +226,7 @@ section{
    text-align: center;
    border: .2rem solid var(--bg-color);
    transition: .5s ease;
+   min-height: 380px;
 }
 .services__box:hover{
    border-color: var(--main-color);
@@ -368,7 +372,9 @@ section{
    font-weight: 600;
    padding: 1rem 2.8em;
 }
-
+.just-validate-error-label{
+   font-size: 1.6rem;
+}
 
 /*------- FOOTER -------*/
 .footer__block{
