@@ -232,6 +232,9 @@ section{
    border-color: var(--main-color);
    transform: scale(1.02);
 }
+.services__container:hover > :not(:hover) {
+   opacity: .4;
+}
 .services__icon-style{
    font-size: 7rem;
    color: var(--main-color);
@@ -255,6 +258,9 @@ section{
    justify-content: center;
    align-items: center;
    gap: 2.5rem;
+}
+.portfolio__container:hover> :not(:hover) {
+   opacity: .4;
 }
 .portfolio__box{
    position: relative;
